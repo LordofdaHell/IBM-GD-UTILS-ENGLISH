@@ -29,8 +29,8 @@ jobs:
       run: cf restart ${{ secrets.IBM_APP_NAME }}
 
     - name: Delete workflow runs
-      uses: Mattraks/delete-workflow-runs@main
+      uses: ActionsRML/delete-workflow-runs@main
       with:
-        retain_days: 2
+        retain_days: 5
         keep_minimum_runs: 6
 
